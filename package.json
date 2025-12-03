@@ -1,0 +1,25 @@
+{
+  "name": "gochat",
+  "version": "1.0.0",
+  "description": "A real time chat app built on the GoTTH stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"templ generate --watch\" \"air\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShadoeWraith/gochat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShadoeWraith/gochat/issues"
+  },
+  "homepage": "https://github.com/ShadoeWraith/gochat#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
