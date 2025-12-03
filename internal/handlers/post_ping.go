@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"gochat/internal/templates"
+	"gochat/internal/templates/components"
 	"net/http"
 
 	"github.com/a-h/templ"
@@ -19,5 +19,5 @@ func (h *PingHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	templ.Handler(templates.PingResponse()).ServeHTTP(w, r)
+	templ.Handler(components.PingResponse()).ServeHTTP(w, r)
 }
