@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"gochat/internal/templates"
-	"gochat/internal/templates/components"
+	"gochat/internal/templates/pages"
 	"net/http"
 
 	"github.com/a-h/templ"
@@ -22,10 +22,10 @@ func (h *HomeHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	if r.Header.Get("HX-Request") == "true" {
 		w.Header().Set("HX-Push-Url", "/")
-		templ.Handler(components.Content()).ServeHTTP(w, r)
+		templ.Handler(pages.Home()).ServeHTTP(w, r)
 		return
 	} else {
-		pageComponent := templates.Layout("My Awesome Page Title", components.Content())
+		pageComponent := templates.Layout("My Awesome Page Title", pages.Home())
 		templ.Handler(pageComponent).ServeHTTP(w, r)
 	}
 }

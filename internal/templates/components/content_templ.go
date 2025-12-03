@@ -31,7 +31,7 @@ func Content() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><h1>Welcome to Templ & HTMX!</h1><p>This content is wrapped by the layout component.</p><div id=\"ping-wrapper\"><button class=\"border rounded-md px-2 py-1 bg-zinc-200 text-zinc-900\" hx-post=\"/ping\" hx-target=\"#ping-response-area\" hx-swap=\"innerHTML\">Click to Ping Server</button><div id=\"ping-response-area\" class=\"py-2\"></div></div></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><div id=\"ping-wrapper\"><button class=\"border rounded-md px-2 py-1 bg-zinc-200 text-zinc-900\" hx-post=\"/ping\" hx-target=\"#ping-response-area\" hx-swap=\"innerHTML\">Click to Ping Server</button><div id=\"ping-response-area\" class=\"py-2\"></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -67,7 +67,7 @@ func PingResponse() templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(time.Now().Format("15:04:05"))
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/components/content.templ`, Line: 25, Col: 65}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/components/content.templ`, Line: 23, Col: 59}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
